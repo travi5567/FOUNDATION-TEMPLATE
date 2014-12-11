@@ -39,7 +39,88 @@ p {
 	-webkit-animation: opacityC 7s; /* Chrome, Safari, Opera */ 
     animation: opacityC 7s;
 }
-
+.tmLogo	{
+	$logoSize: 200px;
+	@include size($logoSize $logoSize);
+	position: relative;
+	overflow: hidden;
+	margin: 80px auto 5px;
+	.t {
+		.topT {
+			height: pxtopercent(4);
+			width: pxtopercent(12);
+			background: color(sky);;
+			position: absolute;
+			top: 0;
+			left: 0;
+			-webkit-animation: moveOne 3s; /* Chrome, Safari, Opera */ 
+			animation: moveOne 3s;
+		}
+		.leftT {
+			height: pxtopercent(10);
+			width: pxtopercent(4);
+			background: color(sky);;
+			position: absolute;
+			top: pxtopercent(6);
+			left: 0;
+			-webkit-animation: moveTwo 3s; /* Chrome, Safari, Opera */ 
+			animation: moveTwo 3s;
+		}
+	}
+	.h {
+		position: absolute;
+		width: pxtopercent(16);
+		height: pxtopercent(16);
+		top: pxtopercent(0);
+		left: pxtopercent(0);
+		overflow: hidden;
+		-webkit-animation: moveThree 3s; /* Chrome, Safari, Opera */ 
+		animation: moveThree 3s;
+		.leftH {
+			height: pxtopercent(10);
+			width: pxtopercent(4);
+			background: $white;
+			position: absolute;
+			top: pxtopercent(6);
+			left: pxtopercent(6);
+		}
+		.rightH {
+			height: pxtopercent(10);
+			width: pxtopercent(4);
+			background: $white;
+			position: absolute;
+			top: pxtopercent(6);
+			left: pxtopercent(12);
+		}
+		.centerH {
+			height: pxtopercent(4);
+			width: pxtopercent(4);
+			background: $white;
+			position: absolute;
+			top: pxtopercent(8);
+			left: pxtopercent(8);
+			//-webkit-animation: moveFour 3s; /* Chrome, Safari, Opera */ 
+			//animation: moveFour 3s;
+		}
+	}
+	
+	@-webkit-keyframes moveOne {
+	    0% {width: pxtopercent(0);}
+	    100% {width: pxtopercent(12);}
+	}
+	@-webkit-keyframes moveTwo {
+	    0% {height: pxtopercent(0);}
+	    100% {height: pxtopercent(10);}
+	}
+	@-webkit-keyframes moveThree {
+	    0% {left: pxtopercent(20);}
+	    100% {left: pxtopercent(0);}
+	}
+	@-webkit-keyframes moveFour {
+	    0% {width: pxtopercent(0);}
+	    100% {width: pxtopercent(4);}
+	}
+}
 
 
 
