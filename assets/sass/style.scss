@@ -1,0 +1,50 @@
+//IMPORTS
+@import 'bourbon/bourbon';
+@import 'mixins/mixins';
+@import '_color-map';
+@import '_color-generator';
+@import 'fonts';
+@import 'mq';
+
+//Variables
+$white: #ffffff;
+$black: #222222;
+$blue: #1fd7ec;
+$white: #ffffff;
+$yellow: #bc9600;
+
+//Functions
+@function pxtopercent($target, $parent: 16) {
+    @return percentage($target / $parent);
+}
+
+* {
+	@include box-sizing(border-box);
+}
+body {
+	position: relative;
+	background: color(peacock) !important;
+	font-size: 16px;
+	font-family: $helvetica;
+	color: $white;
+	width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	color: $white;
+}
+p {
+	color: $white;
+	font-family: eb_garamondregular;
+	-webkit-animation: opacityC 7s; /* Chrome, Safari, Opera */ 
+    animation: opacityC 7s;
+}
+
+
+
+
+
+
+
+
+
